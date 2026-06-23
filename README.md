@@ -11,6 +11,20 @@
 - 识别进场感、注意力管理、理解障碍等问题
 - 严守边界：只诊断不代写，不干涉风格，尊重作者的场景判断
 
+## 快速开始
+
+本仓库本身就是一个 Claude Skill。把 `skills/gold-standard/` 目录放进 Claude Code 的技能目录即可启用：
+
+```bash
+git clone https://github.com/quan2005/gold-standard-skill.git
+mkdir -p ~/.claude/skills
+cp -r gold-standard-skill/skills/gold-standard ~/.claude/skills/
+```
+
+重新打开 Claude Code，技能自动加载。然后在对话里说一句「帮我看看这篇稿子怎么样」并贴上讲稿，它就会按金线 9 条给出品控意见。（Windows 用户把目标路径换成 `%USERPROFILE%\.claude\skills`。）
+
+> 采用标准 SKILL.md 规范，同样兼容 Codex、Copilot CLI、Gemini CLI 等平台——把 `skills/gold-standard/` 放进对应平台的技能目录即可。
+
 ## 触发方式
 
 以下场景会自动激活本技能：
